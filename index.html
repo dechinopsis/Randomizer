@@ -1,0 +1,85 @@
+<!--
+ - Created by dtorresp on 4/30/20.
+ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Randomizer</title>
+    <meta charset="UTF-8">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div id="mainCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="active item">
+                <div class="hero-unit">
+                    <h1>Participantes</h1><br/>
+
+                    <p>Ingrese los participantes en forma de lista en cada cuadro de texto</p>
+
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <div class="control-group">
+                                <label class="control-label" for="inputEmail">Hombres <span id='countMen'
+                                                                                            class="badge badge-info">0</span>
+                                </label>
+                                <div class="controls">
+                                    <textarea id='txMen' data-counter='countMen' rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+                                <label class="control-label" for="inputEmail">Mujeres <span id='countWomen'
+                                                                                            class="badge badge-important">0</span></label>
+                                <div class="controls">
+                                    <textarea id='txWomen' data-counter='countWomen' rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="it1Error" class="alert alert-error hide"></div>
+                    <p>
+                        <a id='btnReady' class="btn btn-primary btn-large">
+                            Listo!
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="hero-unit">
+
+                    <div class="row-fluid">
+                        <div class="span6" id='womenTable'>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Mujeres &nbsp; <span class="hide ready">✅</span></th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="span6" id='menTable'>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>Hombres &nbsp; <span class="hide ready">✅</span></th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
